@@ -1,0 +1,2 @@
+digitalocean_token="018a85a3e19a7dfa3ff77ab586b1561f72865c7ed2aa0828307b40178cf6b1ac"
+nome_cluster="iniciativa-k8s"
