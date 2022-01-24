@@ -25,3 +25,11 @@ resource "digitalocean_kubernetes_cluster" "k8s" {
 
 variable "digitalocean_token"{}
 variable "nome_cluster"{}
+
+output "kubernetes_endpoint" {
+    value = digitalocean_kubernetes_cluster.k8s.endpoint
+}
+resource "local_file" "kube_config" {
+    content     = digitalocean_kubernetes_cluster.k8s.kube_config.0.raw_config
+    filename = "kube_config.yaml"
+}
