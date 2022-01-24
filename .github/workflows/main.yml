@@ -45,4 +45,4 @@ jobs:
         with:
           images: viniciusesteter/rotten-potatoes:${{ github.run_number }}
           manifests: |
-            rotten-potatoes/web-deploy.yaml
+            k8s/deployment.yaml
